@@ -18,7 +18,7 @@ The summarization process involves the following steps:
 3. *Summarization*: The extracted text and images are analyzed to generate a concise summary of the Jupyter notebook content. The tool utilizes OpenAI's GPT-3.5 model for natural language processing.
 4. *Insights Generation*: For images/visualizations, the tool generates insights by analyzing the content and context of each image. This includes identifying visualization types, extracting numerical data, and providing descriptive summaries.
 
-#Note
+# Note
 The input jupyter notebook for the summary should be present in the local directory of codebase
    
 
