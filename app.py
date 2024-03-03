@@ -3,9 +3,7 @@ from tqdm import tqdm
 from openai import OpenAI
 import asyncio
 key=""
-#key=os.getenv('')
 client=OpenAI(api_key=key)
-#client=OpenAI(key)
 async def generate_response_of_text(prompt):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
@@ -76,11 +74,11 @@ def main_function():
     for i in tqdm(img_path):
         prompt = '''Analyse the image and give insights about it. 
         Image: {}'''
-        print("------image_insights-------- ",i,", ")
+       # print("------image_insights-------- ",i,", ")
         image_insights = understand_image(i)
         about_images.append(f'image {j}'  + ' ' + str(image_insights) )
 
-        print("------aboubt-------- ", about_images)
+       # print("------aboubt-------- ", about_images)
         j+=1
     prompt = f'''The following consists description of images/visualizations/flow charts and the code in python that was taken from a
         Jupyter notebook. If visualization then from the IMAGE DESCRIPTIONS match it's code with CODE.
